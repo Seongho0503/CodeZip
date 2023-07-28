@@ -30,8 +30,10 @@ function reducer(currentState, action) {
   return newState;
 }
 
-// createStore을 생성할 때 반드시 reducer 주입하기
-const store = createStore(reducer);
+// redux 초기값 설정
+const initialState = {value: 0} 
+// createStore을 생성할 때 반드시 reducer 주입하기 , 2번째 인사 없어도됨
+const store = createStore(reducer, initialState );
 export default function App() {
   return (
     <div id="container">
